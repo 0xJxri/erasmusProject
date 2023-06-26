@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/background.png);
+    background-size: cover;
+  }
+
+
+.title{
+    font-size:10px; 
+    z-index: 5;
+}
+.banner {
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+}
+
+#logo {
+    width: 60px;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+#logo2{
+    position:static;
+    height: 50px;
+    width: 410px;
+}
+#healer {
+    width: 150px;
+  height: auto;
+  top: 70%;
+  position: absolute;
+  transform-origin: top left;
+  z-index: 2;
+
+}
+#healer:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#station{
+    width: 150px;
+    height: auto;
+    top: 70%;
+    left: 85%;
+    position: absolute;
+}
+#station:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    /* content: url(.images/); */
+}
+
+
+.rectangle {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: #ccc;
+    display: flex;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+
+}
+.rectangle .hover-text {
+    display: none;
+}
+
+.rectangle:hover .initial-text {
+    display: none;
+}
+
+.rectangle:hover .hover-text {
+    display: block;
+}
+.rectangle:hover {
+    height: 350px;
+  }
+  
+  .rectangle img {
+    width: 100%;
+    height: auto;
+  }
+
+.bossA {
+    position: relative;
+    top: 100px;  
+    left: 200px;
+    background-image: url(images/flannery-background.png);
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+}
+.bossA:hover ~ .bossD {
+    transition: 0.3s ease;
+    top: 450px;
+    display: flex;
+}
+.bossA button{
+    margin-left: 65px;
+    text-align: center;    
+    font-weight: bold;
+    background-color: red;
+    text-align: center;
+    border: 2px solid black;
+    padding: 10px 20px;
+}
+
+.bossB{
+    top:100px;  
+    left: 500px;
+    background-image: url(images/phoebe-background.png);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+.bossB:hover ~ .bossE {
+    transition: 0.3s ease;
+    top: 450px;
+    display: flex;
+}
+.bossB button{
+    color: #ffffff;
+    margin-left: 65px;
+    text-align: center;    
+    font-weight: bold;
+    background-color: rgb(125, 15, 112);
+    text-align: center;
+    border: 2px solid black;
+    padding: 10px 20px;
+}
+
+.bossC{
+    top:100px;  
+    left: 800px;
+    background-image: url(images/drake-background.png);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+.bossC:hover ~ .bossF {
+    transition: 0.3s ease;
+    top: 450px;
+    display: flex;
+}
+.bossC button{
+    color: #ffffff;
+    margin-left: 65px;
+    text-align: center;    
+    font-weight: bold;
+    background-color: rgb(43, 4, 113);
+    text-align: center;
+    border: 2px solid black;
+    padding: 10px 20px;
+}
+
+
+.bossD{
+    top:300px;  
+    left: 200px;
+    position:absolute;
+    background-image: url(images/archie-background.png);
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+}
+.bossD button{
+    color: #ffffff;
+    margin-left: 65px;
+    text-align: center;    
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: #000000;
+    border: 2px solid black;
+    padding: 10px 20px;
+}
+
+.bossE{
+    top:300px;  
+    left: 500px;
+    position:absolute;
+    background-image: url(images/maxie-background.png);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+.bossE button{
+    color: #ffffff;
+    margin-left: 65px;
+    text-align: center;    
+    font-weight: bold;
+    background-color: rgb(92, 0, 0);
+    text-align: center;
+    color: #ff560e;
+    border: 2px solid black;
+    padding: 10px 20px;
+}
+
+.bossF{
+    top:300px;  
+    left: 800px;
+    position:absolute;
+    background-image: url(images/red-background.png);
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+}
+
+.bossF button{
+    color: #ffffff;
+    margin-left: 65px;
+    text-align: center;    
+    font-weight: bold;
+    background-color: rgb(101, 196, 225);
+    text-align: center;
+    color: #ffffff;
+    border: 2px solid rgb(255, 248, 248);
+    padding: 10px 20px;
+}
+  
