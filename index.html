@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokeSite</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
     <div class="banner">
-        <img src="images/pokeball.png" alt="" id="logo">
+      <img src="images/pokeball.png" alt="" id="logo" />
     </div>
-    <div class="center">
-    </div>
-    <img src="images/healer.png" alt="" id="healer">
-</body>
+    <br />
+    <input type="text" name="input" id="inputPokemon" />
+    <button type="button" id="myBtn" onclick="pokePhoto()">Click me</button>
+    <button type="button" id="delBtn" onclick="deleteChild()">Delete</button>
+    <div id="error"></div>
+    <div class="center"></div>
+    <a href="https://randompokemon.com/" target="_blank">Search for random pokemon</a>
 
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><div id="print" class="print"></div></div>
+          <div class="swiper-slide"><div class="print"></div></div>
+          <div class="swiper-slide"><div class="print"></div></div>
+          <div class="swiper-slide"><div class="print"></div></div>
+          <div class="swiper-slide"><div class="print"></div></div>
+          <div class="swiper-slide"><div class="print"></div></div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+    <a href="teamPage.html">Team Page</a>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
-<!-- <div class="title">
-    <p>i0shas</p>
-</div> -->
