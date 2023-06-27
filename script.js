@@ -1,31 +1,30 @@
-
 var imageContainer = document.getElementById('print');
+var table = document.getElementById('table');
+var teamCount = 0;
 
 //API call
 function pokePhoto() {
   var input = document.getElementById('inputPokemon').value;
-  
-
 
   fetch("https://pokeapi.co/api/v2/pokemon/"+input)
     .then((response) => {
       return response.json();
     })
     .then((res) => {
-      var pathPhoto = res.sprites.other["official-artwork"].front_default;//defining path
-      console.log(pathPhoto);//check if the path works well
+      var name = res.name;
+      var sprite = res.sprites.other["official-artwork"].front_default;
 
-      var img = new Image();//create new image element
-      img.src = pathPhoto;
-
-      img.onload = function(){
-        imageContainer.appendChild(img);
+      // Update table with Pokemon name
+      if (teamCount < 6) {
+        var cell = table.rows[1].cells[teamCount];
+        cell.innerHTML = name;
+        teamCount++;
       }
 
       document.getElementById("error").innerHTML = " ";
     })
     .catch((error) => {
-      document.getElementById("error").innerHTML = "Pokemon not found!";//handle the errors
+      document.getElementById("error").innerHTML = "Pokemon not found!";
         
       return error;
     });
@@ -33,26 +32,34 @@ function pokePhoto() {
 
 //Delete last child
 function deleteChild(){
-  imageContainer.removeChild(imageContainer.lastChild);
+  // Clear the last Pokemon name in the table
+  if (teamCount > 0) {
+    teamCount--;
+    var cell = table.rows[1].cells[teamCount];
+    cell.innerHTML = "empty";
+  }
 }
 
-//Swiper
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
+// Bosses button click event
+document.getElementById("bosses").addEventListener("click", function(event) {
+    if (teamCount < 6) {
+        event.preventDefault(); // Interrompe l'azione predefinita del collegamento
+        alert("You need a team of 6 to challenge the champions!");
+    } else {
+      // Perform the desired action when the team is complete
+      window.location.href = "bosses.html";
+    }
+  });
+  // Healer button click event
+document.getElementById("healer").addEventListener("click", function(event) {
+    if (teamCount === 0) {
+      event.preventDefault(); // Interrompe l'azione predefinita del collegamento
+      alert("You can't see your team without creating an actual one!");
+    } else {
+      // Perform the desired action when the team is created
+      // E.g., redirect to the healer page
+      window.location.href = "healer.html";
+    }
+  });
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
