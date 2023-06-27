@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/background.png);
+    background-size: cover;
+  }
+
+
+.title{
+    font-size:10px; 
+    z-index: 5;
+}
+.banner {
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+}
+
+#logo {
+    width: 60px;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+#logo2{
+    position:static;
+    height: 50px;
+    width: 410px;
+}
+#station {
+    width: 150px;
+  height: auto;
+  top: 72%;
+  position: absolute;
+  transform-origin: top left;
+  z-index: 2;
+
+}
+#station:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#bosses{
+    width: 150px;
+    height: auto;
+    top: 65%;
+    left: 85%;
+    position: absolute;
+}
+#bosses:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    /* content: url(.images/); */
+}
+
+
