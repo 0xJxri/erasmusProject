@@ -3,7 +3,6 @@ var teamCount = 0;
 const storeNames = [];
 var arrayCells = ["first", "second", "third", "fourth", "fifth", "sixth"];
 
-//API call
 function pokePhoto() {
   var input = document.getElementById("inputPokemon").value;
 
@@ -82,38 +81,24 @@ async function createTeam() {
 
 document.getElementById("bosses").addEventListener("click", function (event) {
   if (teamCount < 6) {
-    event.preventDefault(); // Interrompe l'azione predefinita del collegamento
+    event.preventDefault();
     alert("You need a team of 6 to challenge the champions!");
   } else {
     window.location.href = "bosses.html";
   }
 });
-document.getElementById("healer").addEventListener("click", function (event) {
-  if (teamCount === 0) {
-    event.preventDefault(); // Interrompe l'azione predefinita del collegamento
-    alert("You can't see your team without creating an actual one!");
-  } else {
-    window.location.href = "healer.html";
-  }
-});
 
-
-//Swiper
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
-
-  // If we need pagination
+  
   pagination: {
     el: '.swiper-pagination',
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
