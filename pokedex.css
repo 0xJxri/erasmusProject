@@ -41,31 +41,73 @@ body {
     height: 50px;
     width: 410px;
 }
-#station {
-    width: 150px;
-  height: auto;
-  top: 72%;
-  position: absolute;
-  transform-origin: top left;
-  z-index: 2;
 
-}
-#station:hover{
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
 
-#bosses{
+#station{
     width: 150px;
     height: auto;
     top: 65%;
     left: 85%;
     position: absolute;
 }
-#bosses:hover{
+#station:hover{
     transform: scale(1.1);
     transition: transform 0.3s ease;
-    /* content: url(.images/); */
 }
+
+#title{
+        margin-top: 6%;
+        position: absolute;
+        width: 450px;
+        height: auto;
+}
+
+#title{
+    margin-top: 6%;
+    position: absolute;
+    width: 400px;
+    height: auto;
+    border: 5px solid black;
+}
+
+#title2{
+    margin-top: 6%;
+    position: absolute;
+    width: 400px;
+    height: auto;
+    margin-left: 450px;
+    border: 5px solid black;
+
+}
+
+#title3{
+    margin-top: 6%;
+    position: absolute;
+    width: 400px;
+    height: auto;
+    margin-left: 900px;
+    border: 5px solid black;
+
+}
+#title4{
+        margin-top: 350px;
+        position: absolute;
+        width: 400px;
+        height: auto;
+        border: 5px solid black;
+
+}
+#title5{
+    margin-top: 350px;
+    position: absolute;
+    width: 400px;
+    margin-left: 450px;
+    border: 5px solid black;
+
+    height: auto;
+}
+
+
+
 
 
