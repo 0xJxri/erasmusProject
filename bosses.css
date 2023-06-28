@@ -102,9 +102,9 @@ body {
   }
 
 .bossA {
-    position: relative;
+    position: absolute;
     top: 100px;  
-    left: 200px;
+    left: 250px;
     background-image: url(images/flannery-background.png);
     background-size: cover;
     background-position: center;
@@ -127,7 +127,7 @@ body {
 
 .bossB{
     top:100px;  
-    left: 500px;
+    left: 550px;
     background-image: url(images/phoebe-background.png);
     background-size: cover;
     background-position: center;
@@ -151,7 +151,7 @@ body {
 
 .bossC{
     top:100px;  
-    left: 800px;
+    left: 850px;
     background-image: url(images/drake-background.png);
     background-size: cover;
     background-position: center;
@@ -176,7 +176,7 @@ body {
 
 .bossD{
     top:300px;  
-    left: 200px;
+    left: 250px;
     position:absolute;
     background-image: url(images/archie-background.png);
     background-size: cover;
@@ -197,7 +197,7 @@ body {
 
 .bossE{
     top:300px;  
-    left: 500px;
+    left: 550px;
     position:absolute;
     background-image: url(images/maxie-background.png);
     background-size: cover;
@@ -218,7 +218,7 @@ body {
 
 .bossF{
     top:300px;  
-    left: 800px;
+    left: 850px;
     position:absolute;
     background-image: url(images/red-background.png);
     background-size: cover;
@@ -238,4 +238,7 @@ body {
     padding: 10px 20px;
 }
   
-
+.table{
+    margin-left: 4%;
+    margin-top: 6%;
+}
